@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大肌肌健身</title>
+    <link rel = "icon" href =  
+                        csspic/exercise.png
+            type = "image/x-icon"> 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap');
+     
+          *{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    font-family: 'Noto Sans TC', sans-serif;
+          }
+          body{
+              background-color: #000;
+          }
+          .main-header{
+              background-color: #2f3330;
+              height: 130px;
+              margin-bottom: 20px;
+          }
+          .main-header label{
+             opacity: 0;
+          }
+          #con{
+              opacity: 0;
+          }
+          .main-header .box{
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                max-width: 1200px;
+                margin: auto;
+            }
+            .box .logo{
+                width: 100px;
+                
+            }
+            .box .logo img{
+                width: 100%;
+                vertical-align: middle;
+            }
+                
+            .main-nav{
+                display: flex;
+                margin: auto;
+                
+            }
+            .main-nav a{
+                font-size: 24px;
+                text-decoration: none;
+                padding: 0 20px;
+                color: #b7c446;
+                position: relative;
+                transform:translateY(0px) ;
+                transition: .3s;
+            }
+            .main-nav a:hover{
+                color: #ccc;
+                transform:translateY(-10px) ;
+            }
+            .main-nav a:after{
+                content: '';
+                position: absolute;
+                height: 0;
+                left: 50%;
+                right: 50%;
+                bottom: -5px;
+                border-bottom: 1px solid #aaa;
+                transition: .3s;
+
+            }
+            .main-nav a:hover:after{
+                left: 0%;
+                right: 0%;
+                bottom: -5px;
+            }
+            .main-search{
+                display: flex; /*讓input跟button可以緊密排列*/
+                margin-right: 50px;
+            }
+            .main-search input,.main-search button{
+                border: none;
+                background-color: #fff;
+                padding: 5px ;
+                
+            }
+            .main-search input:focus,.main-search button:focus{
+                outline: none;
+            }
+            .main-search input{
+                border-radius: 200px 0 0 200px;
+            }
+            .main-search button{
+
+                border-radius:0 200px 200px 0;
+                            }
+         .banner {
+                    width: 1400px;
+                    height: 500px;
+                    background-color: #b4f1b1;
+                    background: 
+                    linear-gradient(115deg,#ddd 50%,
+                    transparent 50%) center center / 100% 100%,
+                    url( "csspic/workout6.jpg") 
+                    right center /auto 100%;        
+                    margin: auto;
+                    margin-bottom: 15px;
+            }
+                .banner .banner-content{
+                    width: 1200px;
+                    height: 100%;
+                    margin: auto;
+                    
+                }
+                .banner-txt{
+                height: 100%;
+                display: flex;
+                flex-direction: column;/*直向排列*/
+                justify-content: center;/*主軸對齊中間*/
+                align-items: flex-start;/*讓底線不要填滿*/
+
+            }
+            .banner-txt h1{
+                font-size: 70px;
+                border-bottom: 1px solid #7f7f7f;
+            }
+            .banner-txt h1 small{
+                display: block; /*讓small可以換行*/
+                font-size: 42px;
+            }
+            .banner-txt h2{
+                font-size: 30px;
+            }
+            .banner-txt p{
+                font-size: 30px;
+            }
+            .title-1{
+               
+                max-width: 1200px;
+                display: flex;
+                margin: auto;
+                background-color: #373737
+            }
+            .title-1 .pic img{
+                width: 100%;
+                vertical-align: middle;
+                opacity: 0.8;
+            }
+            .title-1 .pic{
+                margin-left: 10px;
+                width: 50%;
+            }
+            .title-1 .text{
+                
+                color: #fff;
+                width: 50%;
+                order: -1;
+                padding: 15px;
+            }
+            .title-1 .text h1{
+                margin-bottom: 15px;    
+                position: relative;
+                font-size: 40px;
+            }
+            .title-1 .text h1::after{
+                content: '';
+                height:0 ;
+                position: absolute;
+                left: 0;
+                width: 140px;
+                bottom: -5px;
+                border-bottom: 1px solid #cccc;
+            }
+            .title-1 .text p{
+                font-size: 22px;
+                line-height: 1.6em;
+            }
+                .wrap{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .wrap .content-item{
+                    width: 1200px;
+                    display: flex;
+                    margin: auto;
+                    margin-top: 15px;
+                    
+                }
+                .wrap .content-item .item{
+                    width: 400px;
+                    box-sizing: border-box;
+                    display: flex;
+                    
+                    border: 1px solid #4a4a4a;
+                    margin: 10px ;
+                    box-shadow: 0 0 10px  #ccc;
+                }
+                .wrap .content-item .item .item-pic img{
+                    width: 100%;
+                    vertical-align: middle;
+                }
+                .wrap .content-item .item .item-pic{
+                    width: 50%;
+                }
+                .wrap .content-item .item .item-txt{
+                    color: #fff;
+                    width: 50%;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;/*垂直居中*/
+                }
+                .wrap .content-item .item .item-txt h2{
+                    display: block;
+
+                    margin-bottom: 15px;
+                    border-bottom: 1px solid #fff;
+                }
+                .item-txt .btn{
+                    line-height: 1.5em;
+                    text-decoration: none;
+                    color: #2f3330;
+                    background-color: #000000;
+                    border: 1px solid #494949;
+                    border-radius: 10px;
+                    padding: 0 5px;
+                    align-self: flex-end;/*讓btn對齊到右邊*/
+                    margin-top: 1.8em;
+                    
+                }
+                .item-txt .btn:hover{
+                    background-color: #c0c0c0;
+                }
+                .title-txt{
+                    width: 800px;
+                    margin: auto;
+                    color: #ccc;
+                    text-align: center;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                }
+                .title-txt h2{
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    transform: scale(1);
+                    transition: .5s;
+                   
+                }
+                .title-txt h2:hover{
+                    transform: scale(1.5);
+                }
+                .title-txt p{
+                    font-size: 20px;
+                }
+                .title-txt h2::before,.title-txt h2::after{
+                    content: '';
+                    display: block;
+                    height: 1px ;
+                    width: 6em;
+                    flex-grow: 1;
+                    background-color: #aaa;
+                    margin: auto;
+                    
+                    
+                }
+                .title-txt h2::before{
+                    margin-right: 1em;
+                }
+                .title-txt h2::after{
+                    margin-left: 1em;
+                }
+                    .member{
+                        width: 1200px;
+                        display: flex;
+                        margin: auto;
+                    }
+                    .member .member-item{
+                        width: 368px;
+                        margin: 15px;
+                        text-align: center;
+                        border: 1px solid #3e3e3e;
+                        transform: translateY(0px);
+                        transition: all .5s;
+                        box-shadow: 0px 0px 5px #ddd;
+                    }
+                    .member .member-item img{
+                        width: 100%;
+                        vertical-align: middle;
+                    }
+                    .member .member-item .text{
+                        padding: 15px;
+                         color: #ddd;
+                         position: relative;
+                         
+                    }
+                    .member .member-item .text h2{
+                        border-bottom: 1px solid #ccc;
+                        padding: 5px 0;
+                        font-weight: 700px;
+                        margin-bottom: .4em;
+                    }
+                    .member .member-item .text p{
+                        line-height: 1.5em;
+                    }
+                    .member-item .text:before{
+                        position: absolute;
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        top: 0;
+                        left: 0;
+                        border-top: 60px solid transparent;
+                        border-left: 184px solid #fff ;
+                        border-right: 184px solid #ffffff ;
+                        transform: translateY(-100%);
+                    }
+                    .member .member-item:hover{
+                        transform: translateY(-30px);
+                    }
+
+
+
+
+                    .main-footer{
+                        margin: 50px 0 0 0;
+                        background: #4f4f4f;
+    
+                    }
+                    .footer-content{
+                        margin: auto;
+                        width: 1200px;
+                        display: flex;
+                        padding: 40px 0;
+                    }
+
+                    .footer-content .footer-item{
+                        width: 0;
+                        flex-grow: 1;
+                        margin: 0 20px;
+                        
+                    }
+                    .footer-item nav{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .footer-item  h4{
+                        font-size: 24px;
+                        color: #fff;
+                        margin-bottom: .5em;
+                        padding-bottom: .5em;
+                        border-bottom: 1px solid #fff ;
+                    }
+                    .footer-item nav a{
+                        text-decoration: none;
+                        color: #fff;
+                        padding: 5px 0;
+                        position: relative;
+                    }
+                    .footer-item nav a:hover{
+                        color: #b4bd7b;
+                    }
+                  
+                    
+
+                    .copyright{
+                        background: linear-gradient(to right, rgb(67, 67, 67) 0%, black 100%);
+                        text-align: center;
+                        color: #fff;
+                        padding: 10px 0;
+                    }
+
+                    .footer-sub{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .footer-sub form{
+                        display: flex; /*讓兩個input黏再一起*/
+                        width: 100%;
+                        margin: auto; /*垂直置中*/
+                    }
+
+                    .footer-sub input[type="text"],
+                    .footer-sub input[type="submit"]{
+                        border: none;
+                        padding:5px 10px;
+                    }
+                    
+                    .footer-sub input[type="text"]:focus,
+                    .footer-sub input[type="submit"]:focus{
+                        outline: none;
+                    }
+                    .footer-sub input[type="text"]{
+                         width: 0;
+                          flex-grow: 1; /*讓整個表單滿版*/
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                         }
+                         .footer-sub input[type="submit"]{
+                             border-top-right-radius: 10px;
+                             border-bottom-right-radius: 10px;
+                             background-color: #064a48;
+                             color: #fff;
+                         }
+                       
+                         .gotop a{
+                             position: fixed;
+                             bottom: 10px;
+                             right: 10px;
+                             text-decoration: none;
+                             color: #fff;
+                             background-color: #408080;
+                             padding: 5px;
+                             border-radius: 10px;
+                         }
+
+
+                         @media screen and (max-width:768px ){
+                            .banner{
+                                width: 760px;
+                            }
+                            .wrap .content-item{
+                                width: 768px;
+                                display: flex;
+                                flex-direction: column;
+                                
+                            }
+                            .wrap .content-item .item{
+                                width: 700px;
+                                margin-left: 34px;
+                            }
+                            .wrap .content-item .item .item-txt h2{
+                                font-size: 70px;
+                            }
+                            .wrap .content-item .item .item-txt p{
+                                font-size: 32px;
+                            }
+                            .main-header{
+
+                                position: relative;
+                                display: flex;
+
+                            }
+                            .main-header .box{
+                                 display: flex;
+                                 flex-direction: row;
+                                align-content: space-between;
+                                
+                               
+                                 
+                                 }
+                            .main-header label{
+                                opacity: 1;
+                                font-size: 50px;
+                                background-color: #fff;
+                                padding: 0 10px;
+                               
+                            }
+                            .main-header nav{
+                                display:flex;
+                                
+                                flex-direction: column;
+                                position: absolute;
+                                width: 50%;
+                                
+                                top: 120px;
+                                left: -150%;
+                                background-color: #fff;
+                                font-size: 16px;
+                         }
+                         .main-header nav a{
+                             font-size: 20px;
+                             padding: 10px;
+                             border-bottom: 1px solid #000;
+                         }
+                         .main-header nav a:hover{
+                             background-color: #000;
+                         }
+                         #con:checked ~ nav{ /*當打勾後nav出現*/
+                                 left: 0;
+                                 transition: all .5s ease;
+                               }
+                               .main-header form{
+                                margin: 0 30px;
+                               }
+                               .gotop{
+                                   display: none;
+                               }
+                               .member{
+                                   width: 768px;
+                               }
+                              
+                         
+                </style>
+    <body>
+        
+     <header class="main-header">
+            <div class="box">
+               
+                <a href="#" class="logo">
+                    <img src="csspic/logo2.gif" alt="">
+                </a>
+                     <input type="checkbox" name="" id="con">
+                    
+                <nav class="main-nav">
+                    <a href="">最新商品</a>
+                    <a href="">促銷商品</a>
+                    <a href="">關於我們</a>
+                    <a href="">退換貨須知</a>
+                    <a href="#">加入會員</a>
+                </nav>
+                
+                <form action="" class="main-search">
+                    <input type="search">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></i></button>
+                </form>
+                <label for="con">☰</label>
+            </div>
+     </header>
+                <div class="banner">
+                    <div class="banner-content">
+                        <div class="banner-txt">
+                            <h1>
+                                學習對自己負責
+                                    <small>想交女友?先看看自己</small>
+                                </h1>
+                                    <h2>多舉10公斤多吃一塊肉</h2>
+                                    <p>
+                                        還在偷懶嗎???
+                                        <br>
+                                        想想半年後的自己就不辛苦
+                                    </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="title-2">
+                    <div class="title-txt">
+                        <h2>提升力量</h2>
+                        <p>收到電腦一道防止心理複製紅色興奮註明，近期像是筆記本丈夫機器高度通過股份，具備地上輸入，球隊休閒三星總統都是機關情緒認識另一魔法下去相比作用，又有處於微微，分別昨日房產再說基本上讓你真正有機會龍岡，雙手才會對外意見站在老師批准有關，告訴你警察協助，寂寞分。</p>
+                    </div>
+                </div>
+
+
+
+     <div class="title-1">
+         <div class="pic">
+             <img src="csspic/workout1.jpg" alt="">
+         </div>
+         <div class="text">
+             <h1>關於我們</h1>
+             <p>你會改造你沒有專利等級日誌表達做到爭取快樂，的說服飾冠軍必要首先想到，衛生我的心當年一次供求感受進去，轉讓過程咖啡長時間建築工程平均一旦庫</p>
+         </div>
+     </div>
+
+
+
+        <div class="wrap">
+            <div class="content-item">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="csspic/workout2.jpg" alt="">
+                    </div>
+                    <div class="item-txt">
+                        <h2>拋開脂肪</h2>
+                        <p>以外夢幻大賽有一些塑膠家人用品來電醫學不夠細節工業，生氣發揮合理其實，家長日誌，休息中港路左右聯想一套治理突破球隊任何故意健康考</p>
+                        <a href="#" class="btn">more..</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-pic">
+                    <img src="csspic/workout3.jpg" alt="">
+                    </div>
+                    <div class="item-txt">
+                        <h2>拋開脂肪</h2>
+                        <p>以外夢幻大賽有一些塑膠家人用品來電醫學不夠細節工業，生氣發揮合理其實，家長日誌，休息中港路左右聯想一套治理突破球隊任何故意健康考</p>
+                        <a href="#" class="btn">more..</a>
+                    </div>
+                </div>
+                    <div class="item">
+                    <div class="item-pic">
+                        <img src="csspic/workout4.jpg" alt="">
+                    </div>
+                    <div class="item-txt">
+                        <h2>拋開脂肪</h2>
+                        <p>以外夢幻大賽有一些塑膠家人用品來電醫學不夠細節工業，生氣發揮合理其實，家長日誌，休息中港路左右聯想一套治理突破球隊任何故意健康考</p>
+                        <a href="#" class="btn">more..</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="title-2">
+            <div class="title-txt">
+                <h2>學員分享</h2>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-item">
+                <img src="csspic/workout7.jpg">
+                <div class="text">
+                    <h2>CSS 練習</h2>
+                    <p>可能進去事故分為道路按鈕深刻規模發生轉帖白色，主營總是簡介內容簡介招標來電大連簽名哪些醫療類別，金額營養受到不多一位並在上面群發就業不會少年恐怕，走勢皮膚和我左右課堂體力，全球聽說要是攻擊告訴我，和平特價你們，影視為此功能窗口前面技能相同本人，不好意思出。</p>
+                </div>
+            </div>
+            <div class="member-item">
+                <img src="csspic/workout8.jpg">
+                <div class="text">
+                    <h2>CSS 練習</h2>
+                    <p>可能進去事故分為道路按鈕深刻規模發生轉帖白色，主營總是簡介內容簡介招標來電大連簽名哪些醫療類別，金額營養受到不多一位並在上面群發就業不會少年恐怕，走勢皮膚和我左右課堂體力，全球聽說要是攻擊告訴我，和平特價你們，影視為此功能窗口前面技能相同本人，不好意思出。</p>
+                </div>
+            </div>
+            <div class="member-item">
+                <img src="csspic/workout9.jpg">
+                <div class="text">
+                    <h2>CSS 練習</h2>
+                    <p>可能進去事故分為道路按鈕深刻規模發生轉帖白色，主營總是簡介內容簡介招標來電大連簽名哪些醫療類別，金額營養受到不多一位並在上面群發就業不會少年恐怕，走勢皮膚和我左右課堂體力，全球聽說要是攻擊告訴我，和平特價你們，影視為此功能窗口前面技能相同本人，不好意思出。</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="title-2">
+            <div class="title-txt">
+                <h2>品牌精神</h2>
+                <p>收到電腦一道防止心理複製紅色興奮註明，近期像是筆記本丈夫機器高度通過股份，具備地上輸入，球隊休閒三星總統都是機關情緒認識另一魔法下去相比作用，又有處於微微，分別昨日房產再說基本上讓你真正有機會龍岡，雙手才會對外意見站在老師批准有關，告訴你警察協助，寂寞分。</p>
+            </div>
+        </div>
+
+
+                <div class="main-footer">
+                    <div class="footer-content">
+                        <div class="footer-item">
+                            <h4>顧客服務</h4>
+                            <nav>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>配送方式</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>付款方式</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>服飾顏色及尺寸</a>
+                                
+                            </nav>                            
+                        </div>
+                        <div class="footer-item">
+                            <h4>關於我們</h4>
+                            <nav>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>材質種類</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>品牌精神</a>
+
+                            </nav>
+                        </div>
+                        <div class="footer-item">
+                            <h4>條款與政策</h4>
+                            <nav>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>退換貨政策</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>隱私條款</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>購物金使用規範</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>預購相關規章</a>
+                               
+                            </nav>
+                        </div>
+                        <div class="footer-item footer-sub">
+                            <h4>訂閱電子報</h4>
+                                <form action="">
+                                    <input type="text">
+                                    <input type="submit" value="訂閱">
+                                </form>
+                        </div>
+                        
+                    </div>
+                        <div class="copyright">
+                            Copyright  &copy; 2020 css partice by Jason.
+                        </div>
+                </div>
+
+
+
+               <div class="gotop">
+                   <a href="#">回到頂端</a>
+               </div>
+            
+</html>
